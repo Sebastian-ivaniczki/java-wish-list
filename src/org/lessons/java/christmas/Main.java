@@ -14,7 +14,11 @@ public class Main {
 		while(isGo) {
 			System.out.println("per aggiungere qualcosa alla tua wish list digita 1 per terminare digita tua");
 			int val = sc.nextInt();
-			
+			if(val<1 || val>2) {
+				System.out.println("l'opzione selezzionata non e valita");
+				continue;
+				
+			}
 			if(val == 1) {
 				String t = sc.nextLine();
 				System.out.println("aggiungi un elemento alla tua whish list");
@@ -26,7 +30,7 @@ public class Main {
 				isGo = false;
 			}
 		}
-				
+			sc.close();	
 		System.out.println("ecco la tua lista desideri: " + wishList);	
 	}
 }
