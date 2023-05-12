@@ -16,10 +16,13 @@ public class MainMap {
 		
 		for(String word : str1) {
 			//System.out.println(word);
-			
-			word.toCharArray();
-			Integer count = wordCaunt.getOrDefault(word, 0);
-			wordCaunt.put(word, count + 1);
+			word = word.replaceAll("\\p{Punct}", "");
+			if(!word.isEmpty()) {
+				
+				word.toCharArray();
+				Integer count = wordCaunt.getOrDefault(word, 0);
+				wordCaunt.put(word, count + 1);
+			}
 		}
 		
 		System.out.println(wordCaunt);
