@@ -19,7 +19,8 @@ public class MainMap {
 			word = word.replaceAll("\\p{Punct}", "");
 			if(!word.isEmpty()) {
 				
-				word.toCharArray();
+				
+				word.toLowerCase();
 				Integer count = wordCaunt.getOrDefault(word, 0);
 				wordCaunt.put(word, count + 1);
 			}
